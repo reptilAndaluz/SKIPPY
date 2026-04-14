@@ -1,1 +1,22 @@
-pip freeze > requirements.txt
+# ── SKIPPY — Dependencias del proyecto ───────────────────
+# Generado con pip freeze. Para instalar: pip install -r requirements.txt
+
+# Framework RAG
+langchain==1.2.12
+langchain-community==0.4.1
+langchain-core==1.2.28
+langchain-text-splitters==1.1.1
+
+# Proveedores de modelos
+langchain-ollama==1.1.0
+langchain-huggingface==1.2.1
+
+# Vector Store
+langchain-chroma==1.1.0
+chromadb==1.5.5
+
+# Procesamiento de documentos
+pypdf==6.9.1
+
+# Embeddings
+sentence-transformers==5.3.0
