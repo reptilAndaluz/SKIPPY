@@ -69,5 +69,5 @@ def query(question):
         Respuesta generada por el LLM basada en los documentos.
     """
     chain = build_rag_chain()
-    response = chain.invoke(question)
+    response = chain.invoke(question)  # type: ignore[union-attr]
     return response

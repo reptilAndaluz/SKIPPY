@@ -1,8 +1,9 @@
 {
-  "venvPath": ".",
+  "venvPath": "/home/reptil/Documentos/SKIPPY",
   "venv": ".venv",
   "pythonVersion": "3.14",
   "root": ".",
   "extraPaths": ["."],
-  "reportMissingImports": "warning"
+  "reportMissingImports": "warning",
+  "pythonPlatform": "Linux"
 }
