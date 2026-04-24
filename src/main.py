@@ -6,6 +6,11 @@ Modos: --ingest para ingestar documentos, sin flags para chat interactivo.
 import argparse
 import gc
 import sys
+import warnings
+
+# Ocultar advertencia de Pydantic V1 en Python 3.14+
+warnings.filterwarnings("ignore", category=UserWarning, module="langchain_core")
+warnings.filterwarnings("ignore", category=UserWarning, module="pydantic")
 
 from src.config import RAW_DIR, CHROMA_DIR
 
@@ -103,7 +108,7 @@ def run_chat():
             # Limpieza de memoria entre consultas
             gc.collect()
 
-        except KeyboardInterrupt:
+        except (KeyboardInterrupt, EOFError):
             print(f"\n\n{Colors.MAGENTA}👋 ¡Hasta luego!{Colors.RESET}")
             break
         except Exception as e:
